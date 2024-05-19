@@ -1,9 +1,8 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { taskcontext } from "../Context/TaskContext"
 
-const Show = (props)=>{
-    const tasks = props.tasks;
-    const settasks = props.settasks
-    const [title,settitle] = useState("")
+const Show = ()=>{
+    const [tasks,settasks] = useContext(taskcontext)
     const CompleteHandler= (index) =>{
         const copytask = [...tasks];
         console.log(index)
@@ -28,7 +27,8 @@ const Show = (props)=>{
           <div className="flex items-center">
             <div
             onClick={()=>CompleteHandler(index)}
-              className={`${task.completed ? "bg-green-600 ":"border"} mr-4 rounded-full w-[30px] h-[30px]  border-orange-600}`}
+            
+              className={`${task.completed ? "bg-green-600 ":"border"} mr-4 rounded-full w-[30px] h-[30px] border-orange-600}`}
             ></div>
             <h1
 

@@ -14,7 +14,7 @@ export const App = () => {
   return (
     <div className='w-screen min-h-[100vh] bg-zinc-800 flex items-center flex-col'>
       {/* */}
-        <Header tasks={tasks}/>
+        <Header/>
 
         {/* */}
         
