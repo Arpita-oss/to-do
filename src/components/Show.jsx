@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useContext} from "react"
 import { taskcontext } from "../Context/TaskContext"
 
 const Show = ()=>{
@@ -12,8 +12,8 @@ const Show = ()=>{
     
       }
       const DeleteHandler = (id)=>{
-        settasks(tasks.filter((t)=>(t.id != id)))
-        localStorage.setItem("tasks", JSON.stringify(tasks.filter((t)=>{t.id != id})))
+        settasks(tasks.filter((t)=>t.id != id))
+        localStorage.setItem("tasks", JSON.stringify(tasks.filter((t)=>t.id != id)))
     
       }
     

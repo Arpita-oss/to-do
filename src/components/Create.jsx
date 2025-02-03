@@ -18,8 +18,6 @@ const Create = ()=>{
         localStorage.setItem("tasks", JSON.stringify([...tasks, newtodo]));
 
       }
-      
-      
     return(
         <form onSubmit={submitHandler} className='w-[35%] flex justify-between px-5 my-[2%]'>
           <input 

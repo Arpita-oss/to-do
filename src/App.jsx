@@ -6,15 +6,10 @@ import Show from './components/Show';
 
 export const App = () => {
   const [tasks,settasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
-  const [title,settitle] = useState("");
-
-  
-  
-
   return (
-    <div className='w-screen min-h-[100vh] bg-zinc-800 flex items-center flex-col'>
+    <div className='w-screen min-h-[100vh] bg-zinc-800 flex items-center flex-col '>
       {/* */}
-        <Header/>
+        <Header tasks={tasks}/>
 
         {/* */}
         
